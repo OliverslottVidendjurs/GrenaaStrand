@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Poppins&display=swap');
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "mixins";
+@import "colorVars";
+
 body {
-    // background-color: black;
+    font-family: 'Poppins', sans-serif;
+    background-color: $col-light-brown;
+}
+
+#big-img {
+    h1 {
+        @include center(true, true);
+
+        font-family: 'Hepta Slab', serif;
+        color: $col-dark-brown;
+        white-space: nowrap;
+        user-select: none;
+
+        @include media-breakpoint-up(xs) {
+            font-size: 30px;
+        }
+
+        @include media-breakpoint-up(sm) {
+            font-size: 40px;
+        }
+
+        @include media-breakpoint-up(md) {            
+            font-size: 50px;
+        }
+
+        @include media-breakpoint-up(lg) {          
+            font-size: 60px;
+        }
+
+        @include media-breakpoint-up(xl) {                      
+            font-size: 70px;
+        }
+    }
+}
+
+h2 {
+    color: $col-dark-brown;
 }

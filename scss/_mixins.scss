@@ -1,0 +1,19 @@
+@mixin center($horizontal: false, $vertical: false) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @if $horizontal {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @if $vertical {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @if $vertical and $horizontal {
+        transform: translate(-50%, -50%);
+    }
+}
